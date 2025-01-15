@@ -107,4 +107,4 @@ GET,/api/categories,List all available categories
     To verify API stability and prevent regressions, run the feature test suite:
 
     php artisan test
-
+   

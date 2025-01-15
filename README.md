@@ -98,13 +98,24 @@ git clone https://github.com/yourusername/expense-pulse-api.git
 
 ## 🛤️ API Roadmap
 
-Method,Endpoint,Description
-GET,/api/transactions,Paginated history with category details
-POST,/api/transactions,Store new record (Validated)
-GET,/api/categories,List all available categories
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **GET** | `/api/transactions` | Retrieve paginated transaction history with category relationships. |
+| **POST** | `/api/transactions` | Validate and store a new financial record. |
+| **GET** | `/api/categories` | Fetch all available expense and income categories for dropdowns. |
 
+---
+
+### 🧪 Sample Request Payload (`POST /api/transactions`)
+```json
+{
+    "category_id": 1,
+    "amount": 1500.00,
+    "description": "Monthly Grocery",
+    "transaction_date": "2026-01-05"
+}
 ## 🧪 Testing Suite
     To verify API stability and prevent regressions, run the feature test suite:
 
     php artisan test
-   
+
